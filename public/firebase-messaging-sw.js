@@ -10,7 +10,3 @@ firebase.initializeApp({
   measurementId: "G-023PY6EH0S",
 });
 const messaging = firebase.messaging();
-
-messaging.onMessage(function (message) {
-  console.log(messsage);
-});
