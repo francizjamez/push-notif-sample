@@ -71,15 +71,3 @@ self.addEventListener("message", (event) => {
 });
 
 // Any other custom service worker logic can go here.
-
-Notification.requestPermission(function (status) {
-  console.log("Notification permission status:", status);
-});
-
-export function displayNotification() {
-  if (Notification.permission === "granted") {
-    navigator.serviceWorker.getRegistration().then(function (reg) {
-      reg.showNotification("Hello world!");
-    });
-  }
-}
