@@ -9,17 +9,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
         <button
           onClick={async () => {
             const tokenRes = await askForPermissionToReceiveNotifications();
@@ -28,7 +18,8 @@ function App() {
         >
           Click to receive notifications
         </button>
-        <p>token: {token}</p>
+
+        <h3 style={{ width: "95%", wordWrap: "break-word" }}>Token: {token}</h3>
       </header>
     </div>
   );
