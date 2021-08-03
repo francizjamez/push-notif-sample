@@ -1,13 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { askForPermissionToReceiveNotifications } from "./firebaseConfig";
 
 function App() {
-  useEffect(() => {
-    askForPermissionToReceiveNotifications();
-  });
-
   return (
     <div className="App">
       <header className="App-header">
@@ -23,6 +19,9 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={askForPermissionToReceiveNotifications}>
+          Click to receive notifications
+        </button>
       </header>
     </div>
   );
