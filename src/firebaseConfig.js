@@ -12,7 +12,9 @@ const firebaseConfig = {
   measurementId: "G-023PY6EH0S",
 };
 
-firebase.initializeApp(firebaseConfig);
+export const initializeFirebase = () => {
+  firebase.initializeApp(firebaseConfig);
+};
 
 export const askForPermissionToReceiveNotifications = async () => {
   try {
